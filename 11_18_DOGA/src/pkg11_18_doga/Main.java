@@ -52,7 +52,7 @@ public class Main {
             System.out.println(allamforma.get(i));
         }*/
         
-        //?? C --
+        //?? D --
         System.out.println("FELADAT D");
         for (int i = 0; i < foldresz.size(); i++) {
             if (allamforma.get(i).equals("köztársaság")) {
@@ -61,7 +61,7 @@ public class Main {
             }
         }
         
-        //D
+        //E
         System.out.println("    ");
         System.out.println("FELADAT E");
         int counter = 0;
@@ -73,16 +73,46 @@ public class Main {
         }
         System.out.println(counter + " Köztársaság van!");
         
-        //E
+        //F
         System.out.println("");
         System.out.println("FELADAT F");
         int term2 = 0;
         int laksz = 0;
         for (int i = 0; i < foldresz.size(); i++) {
-            term2 += terulet.get(i).lakosok;
+            term2 += terulet.get(i);
+            laksz += lakosok.get(i);
         }
+        System.out.println(term2 + " Négyzetméter területen fekszik");
+        System.out.println(laksz + " lakosuk van összesen");
+        
+        //G
+        System.out.println("   ");
+        System.out.println("FELADAT G");
         
         
+        String minnev = null;
+        int mincounter = 0;
+        
+        for (int i = 0; i < foldresz.size(); i++) {
+            if(mincounter < terulet.get(i));
+            {
+                mincounter = terulet.get(i);
+                minnev = orszagnev.get(i);
+            }
+        }
+        System.out.println("Legkisebb terület ország: " + minnev);
+        
+        //H
+        System.out.println("");
+        System.out.println("FELADAT H");
+        
+        for (int i = 0; i < foldresz.size(); i++) 
+        {
+            if (foldresz.get(i).equals("Afrika"))
+            {
+                System.out.println(orszagnev.get(i) + ": " + ((lakosok.get(i)*1000) / terulet.get(i)) + " fo/km2");
+            }
+        }
         
             
             
